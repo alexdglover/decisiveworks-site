@@ -38,6 +38,24 @@
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
+            <div class="row text-center" style="padding-bottom:20px;" id="callToAction"><!-- Call to action -->
+              <!-- Begin MailChimp Signup Form -->
+              <div class="col-md-6" style="color: #fed136"><h4>Subscribe and receive 80% off our AWS CodeDeploy Course!</h4></div>
+              <div style="col-md-5">
+                <form action="//alexdglover.us12.list-manage.com/subscribe/post?u=5a49997348aca210430b9c059&amp;id=78e0d50e0d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+              	  <input type="email" value="" name="EMAIL" class="form-control required email" id="mce-EMAIL" style="width:25%; display:inline;" placeholder="Your Email *" required data-validation-required-message="Please enter your email address">
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">
+                  <button type="button" class="btn btn-danger" href="#" id="hideCallToActionButton"><i class="fa fa-times"></i></button>
+              	  <div id="mce-responses" class="clear">
+              		  <div class="response" id="mce-error-response" style="display:none"></div>
+              		  <div class="response" id="mce-success-response" style="display:none"></div>
+              	  </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_5a49997348aca210430b9c059_78e0d50e0d" tabindex="-1" value=""></div>
+                </form>
+              </div>
+            <div class="clearfix"></div>
+          </div><!-- end of call to action div -->
+
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -530,7 +548,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Decisive Labs 2015</span>
+                    <span class="copyright">Copyright &copy; Decisive Labs 2016</span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
@@ -890,6 +908,16 @@
       });
     }
     </script>
+    <script>
+    $( "#hideCallToActionButton" ).click(function() {
+      $('#callToAction').slideToggle(500);
+    });
+    setTimeout(function() {
+      //$('#callToAction').fadeOut('slow');
+      $('#callToAction').slideToggle(500);
+    }, 30000); // <-- time in milliseconds
+    </script>
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us12.list-manage.com","uuid":"5a49997348aca210430b9c059","lid":"78e0d50e0d"}) })</script>
 </body>
 
 </html>

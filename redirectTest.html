@@ -20,7 +20,7 @@ $(function(){
   $('form').submit(function(){
      var couponCode=$("#couponCode").val();
      js_setcookie("couponCode", couponCode);
-     window.location = ""; // "" means GET the same page ... change it to whatever backend URL you want instead, for example "http://..../nextpage" .
+     window.location = "https://www.udemy.com/aws-codedeploy/"; // "" means GET the same page ... change it to whatever backend URL you want instead, for example "http://..../nextpage" .
      return false; // prevent the default event handler that will make a GET request with a query string in it.
   });
 });

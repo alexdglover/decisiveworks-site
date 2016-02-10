@@ -17,7 +17,7 @@ function js_setcookie(c_name,value){
 }
 
 $(function(){
-  $('form').submit(function(){
+  $('#submitme').onclick(function(){
      var couponCode=$("#couponCode").val();
      js_setcookie("couponCode", couponCode);
      window.location = "https://www.udemy.com/aws-codedeploy/"; // "" means GET the same page ... change it to whatever backend URL you want instead, for example "http://..../nextpage" .

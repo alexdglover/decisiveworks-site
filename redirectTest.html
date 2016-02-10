@@ -1,8 +1,29 @@
-<html>
+<?php
+//unsets the cookie:
+setcookie('username', "", time() - 3600);
+?>
+<!DOCTYPE html>
 <body>
-<form action="https://www.udemy.com/aws-codedeploy/" method="POST">
-<input type="hidden" name="couponCode" value="r4f3S6RTLmnT28" />
-<input type="submit" name="submit" value="submit" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+<form name="entername" action="" method="get">
+    <input type="hidden" id="couponCode" name="couponCode" value="r4f3S6RTLmnT28"><br/>
+    <input id="submitme" type="submit" value="Submit" class="button">
 </form>
+
+<script>
+function js_setcookie(c_name,value){
+    document.cookie=c_name + "=" + escape(value);
+}
+
+$(function(){
+  $('form').submit(function(){
+     var couponCode=$("#couponCode").val();
+     js_setcookie("couponCode", couponCode);
+     window.location = ""; // "" means GET the same page ... change it to whatever backend URL you want instead, for example "http://..../nextpage" .
+     return false; // prevent the default event handler that will make a GET request with a query string in it.
+  });
+});
+</script>
 </body>
 </html>

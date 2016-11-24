@@ -914,7 +914,10 @@
         dataType: "json"
       })
       .done(function() {
-        $("#thanksModal").modal('show')
+        $("#thanksModal").modal('show');
+        setTimeout(function() {
+          $("#thanksModal").modal('hide');
+        }, 3000);
       });
     }
     </script>
